@@ -23,7 +23,7 @@ modules:
 
   - type: rpm-ostree
     repos:
-      - https://copr.fedorainfracloud.org/coprs/dusansimic/themes/repo/fedora-%FEDORA_VERSION%/dusansimic-themes-fedora-%FEDORA_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/dusansimic/themes/repo/fedora-%OS_VERSION%/dusansimic-themes-fedora-%OS_VERSION%.repo
       - https://fedorapeople.org/groups/virt/virtio-win/virtio-win.repo
     install:
       - morewaita-icon-theme
