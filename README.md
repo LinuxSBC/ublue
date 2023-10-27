@@ -46,7 +46,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/LinuxSBC/ublue:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/linuxsbc/ublue:latest
   ```
 - Reboot to complete the rebase:
   ```
@@ -54,7 +54,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
   ```
 - Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/LinuxSBC/ublue:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/linuxsbc/ublue:latest
   ```
 - Reboot again to complete the installation
   ```
@@ -64,7 +64,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
 This repository builds date tags as well, so if you want to rebase to a particular day's build:
 
 ```
-rpm-ostree rebase ostree-image-signed:docker://ghcr.io/LinuxSBC/ublue:20230403
+rpm-ostree rebase ostree-image-signed:docker://ghcr.io/linuxsbc/ublue:20230403
 ```
 
 This repository by default also supports signing.
