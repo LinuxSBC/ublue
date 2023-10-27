@@ -22,10 +22,31 @@ modules:
           # config directory on ostree. Read more in the files module's README
 
   - type: rpm-ostree
-    repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/dusansimic/themes/repo/fedora-%FEDORA_VERSION%/dusansimic-themes-fedora-%FEDORA_VERSION%.repo
+      - https://fedorapeople.org/groups/virt/virtio-win/virtio-win.repo
     install:
-      # - micro
-      # - starship
+      - morewaita-icon-theme
+      - gnome-shell-extension-pop-shell
+      - gnome-shell-extension-appindicator
+      - gnome-shell-extension-blur-my-shell
+      - zsh
+      - neovim
+      # Needed?
+      #- gstreamer1-plugin-libav
+      #- gstreamer1-plugins-bad-free-extras
+      #- gstreamer1-plugins-bad-freeworld
+      #- gstreamer1-plugins-ugly
+      #- gstreamer1-vaapi
+      - steam-devices
+      - nautilus-python
+      - tmux
+      - bat
+      - gh
+      - socat
+      - wl-clipboard
+      - virt-manager
+      - virtio-win
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
@@ -51,8 +72,35 @@ modules:
       #  will be installed and set up
     custom-flatpaks:
       # this section is optional
-      # - Celluloid: io.github.celluloid_player.Celluloid
+      - Celluloid: io.github.celluloid_player.Celluloid
       # - Krita: org.kde.krita
+      - Firefox: org.mozilla.firefox
+
+  - type: default-flatpaks
+    system:
+      repo-title: "Flathub (system-wide)"
+      install:
+        - org.gtk.Gtk3theme.adw-gtk3
+        - org.gtk.Gtk3theme.adw-gtk3-dark
+    system:
+      repo-url: https://dl.flathub.org/beta-repo/flathub-beta.flatpakrepo
+      repo-name: flathub-beta
+      repo-title: "Flathub (beta) (system-wide)"
+    user:
+      repo-title: "Flathub (user-specific)"
+
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode
+        - Hack
+        - SourceCodePro
+        - Terminus
+        - JetBrainsMono
+        - NerdFontsSymbolsOnly
+      google-fonts:
+        - Roboto
+        - Open Sans
 
   - type: script
     scripts:
