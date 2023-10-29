@@ -11,9 +11,6 @@ fi
 curl https://raw.githubusercontent.com/ppvan/nautilus-open-in-blackbox/main/nautilus-open-in-blackbox.py > /usr/share/nautilus-python/extensions/blackbox_extension.py
 
 echo "-- Setting BlackBox as default terminal --"
-update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/blackbox-terminal 50
-update-alternatives --set x-terminal-emulator /usr/bin/blackbox-terminal
-
 echo "X-ExecArg=-c" >> /usr/share/applications/com.raggesilver.BlackBox.desktop
 curl https://raw.githubusercontent.com/Vladimir-csp/xdg-terminal-exec/master/xdg-terminal-exec > /usr/bin/xdg-terminal-exec
 chmod +x /usr/bin/xdg-terminal-exec
