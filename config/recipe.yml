@@ -108,3 +108,5 @@ modules:
     scripts:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
+      # adds xdg-terminal-exec and sets BlackBox as default terminal
+      - blackbox.sh
