@@ -54,7 +54,6 @@ modules:
       - rpmfusion-free-release-tainted
       - libdvdcss
     remove:
-      - mesa-vdpau-drivers
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
