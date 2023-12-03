@@ -32,6 +32,8 @@ modules:
       - gnome-shell-extension-blur-my-shell
       - zsh
       - neovim
+      - lsd
+      - fd-find
       - blackbox-terminal
       - steam-devices
       - nautilus-python
