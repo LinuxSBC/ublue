@@ -51,8 +51,6 @@ modules:
       - gstreamer1-plugins-ugly
       - gstreamer1-vaapi
       - mesa-vdpau-drivers-freeworld
-      - rpmfusion-free-release-tainted
-      - libdvdcss
     remove:
 
   - type: bling # configure what to pull in from ublue-os/bling
