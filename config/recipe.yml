@@ -33,12 +33,6 @@ modules:
       - zsh
       - neovim
       - blackbox-terminal
-      # Needed?
-      #- gstreamer1-plugin-libav
-      #- gstreamer1-plugins-bad-free-extras
-      #- gstreamer1-plugins-bad-freeworld
-      #- gstreamer1-plugins-ugly
-      #- gstreamer1-vaapi
       - steam-devices
       - nautilus-python
       - tmux
@@ -48,9 +42,17 @@ modules:
       - wl-clipboard
       - virt-manager
       - virtio-win
+      # Codecs
+      - gstreamer1-plugin-openh264
+      - gstreamer1-plugins-bad-free-extras
+      - gstreamer1-plugins-bad-freeworld
+      - gstreamer1-plugins-ugly
+      - gstreamer1-vaapi
+      - mesa-vdpau-drivers-freeworld
+      - rpmfusion-free-release-tainted
+      - libdvdcss
     remove:
-      - firefox # default firefox removed in favor of flatpak
-      - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+      - mesa-vdpau-drivers
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
@@ -75,7 +77,7 @@ modules:
       # this section is optional
       - Celluloid: io.github.celluloid_player.Celluloid
       # - Krita: org.kde.krita
-      - Firefox: org.mozilla.firefox
+      # - Firefox: org.mozilla.firefox
       - Resources System Monitor: net.nokyan.Resources
 
   - type: default-flatpaks
