@@ -69,7 +69,7 @@ jobs:
           echo "Checking for difference between public key from SIGNING_SECRET and cosign.pub"
           expected=$(cat cosign.pub)
           actual=$(cosign public-key --key env://COSIGN_PRIVATE_KEY)
-          diff -u <(echo $actual) <(echo $expected)
+          delta=$(diff -u <(echo $actual) <(echo $expected))
           if [ -z "$delta" ]; then
             echo "cosign.pub matches SIGNING_SECRET"
           else
