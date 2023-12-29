@@ -67,7 +67,7 @@ jobs:
         shell: bash
         run: |
           echo "Checking for difference between public key from SIGNING_SECRET and cosign.pub"
-          pubkey=$(cosign public-key --key env://COSIGN_PRIVATE_KEY
+          pubkey=$(cosign public-key --key env://COSIGN_PRIVATE_KEY)
           diff -u <(echo $pubkey) cosign.pub
           diff -u <(echo "test") <(echo "test1")
           delta=$(diff -u <(echo $pubkey) cosign.pub)
