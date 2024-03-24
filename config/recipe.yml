@@ -10,6 +10,7 @@ image-version: 39 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+  - type: signing
   - type: files
     files:
       - usr: /usr # copy static configurations
