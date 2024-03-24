@@ -48,10 +48,9 @@ modules:
       - gstreamer1-vaapi
       - mesa-vdpau-drivers-freeworld
     remove:
-      # example: removing firefox (in favor of the flatpak)
-      # "firefox" is the main package, "firefox-langpacks" is a dependency
-      # - firefox
-      # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+      # Remove GNOME Terminal in favor of BlackBox
+      - gnome-terminal
+      - gnome-terminal-nautilus
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -70,7 +69,7 @@ modules:
       # Installing different branches of the same Flatpak is not supported.
       remove:
       # - org.gnome.eog
-      #
+
     # A flatpak repo can also be added without having to install flatpaks,
     # as long as one of the repo- fields is present
     system:

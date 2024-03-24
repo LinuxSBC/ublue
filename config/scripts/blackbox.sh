@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 set -oue pipefail
 
-echo "-- Removing gnome-terminal in favor of the BlackBox flatpak --"
-rpm-ostree override remove gnome-terminal gnome-terminal-nautilus
-
 echo "-- Installing OpenInBlackBox for Nautilus integration --"
 if [[ ! -d /usr/share/nautilus-python/extensions/ ]]; then
     mkdir -v -p /usr/share/nautilus-python/extensions/
