@@ -24,7 +24,7 @@ modules:
       - morewaita-icon-theme
       - gnome-shell-extension-pop-shell
       - gnome-shell-extension-appindicator
-      - gnome-shell-extension-blur-my-shell
+      # - gnome-shell-extension-blur-my-shell
       - zsh
       - neovim
       - lsd
