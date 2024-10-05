@@ -20,6 +20,7 @@ modules:
     repos:
       - https://copr.fedorainfracloud.org/coprs/dusansimic/themes/repo/fedora-%OS_VERSION%/dusansimic-themes-fedora-%OS_VERSION%.repo
       - https://fedorapeople.org/groups/virt/virtio-win/virtio-win.repo
+      - https://copr.fedorainfracloud.org/coprs/sneexy/zen-browser/repo/fedora-%OS_VERSION%/sneexy-zen-browsder-fedora-%OS_VERSION%.repo
     install:
       - morewaita-icon-theme
       - gnome-shell-extension-pop-shell
@@ -47,6 +48,7 @@ modules:
       - gstreamer1-plugins-ugly
       - gstreamer1-vaapi
       - mesa-vdpau-drivers-freeworld
+      - zen-browser
     remove:
       # Remove GNOME Terminal in favor of BlackBox
       - gnome-terminal
