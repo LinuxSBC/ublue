@@ -48,7 +48,7 @@ modules:
       - gstreamer1-plugins-ugly
       - gstreamer1-vaapi
       - mesa-vdpau-drivers-freeworld
-      - zen-browser
+      #- zen-browser
     remove:
       # Remove GNOME Terminal in favor of BlackBox
       - gnome-terminal
