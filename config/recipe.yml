@@ -49,7 +49,7 @@ modules:
       - gstreamer1-vaapi
       # - mesa-va-drivers-freeworld
       # - mesa-vdpau-drivers-freeworld
-      - intel-media-driver
+      # - intel-media-driver
       #- zen-browser
     remove:
       # Remove GNOME Terminal in favor of BlackBox
